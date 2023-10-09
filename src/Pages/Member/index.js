@@ -619,7 +619,7 @@ const Members = (props) => {
               <div className="card-body datatable-card-body">
                 <div className="datatable-header-tools">
                   <div className="datatable-actions">
-                    {userRole !== "member" && (
+                    {props.userRole !== "member" && (
                       <button
                         className="datatable-action add-bg"
                         onClick={() => history.push(`/members/add`)}
