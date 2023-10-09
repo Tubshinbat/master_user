@@ -619,12 +619,14 @@ const Members = (props) => {
               <div className="card-body datatable-card-body">
                 <div className="datatable-header-tools">
                   <div className="datatable-actions">
-                    <button
-                      className="datatable-action add-bg"
-                      onClick={() => history.push(`/members/add`)}
-                    >
-                      <i className="fa fa-plus"></i> Нэмэх
-                    </button>
+                    {userRole !== "member" && (
+                      <button
+                        className="datatable-action add-bg"
+                        onClick={() => history.push(`/members/add`)}
+                      >
+                        <i className="fa fa-plus"></i> Нэмэх
+                      </button>
+                    )}
                     <button
                       className="datatable-action edit-bg"
                       onClick={() => handleEdit()}
@@ -837,6 +839,7 @@ const mapStateToProps = (state) => {
     error: state.memberReducer.error,
     members: state.memberReducer.members,
     pagination: state.memberReducer.paginationLast,
+    userRole: state.tokenReducer.role,
   };
 };
 
