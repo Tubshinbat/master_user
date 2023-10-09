@@ -215,6 +215,20 @@ const Members = (props) => {
       },
     },
     {
+      dataIndex: "phoneNumber",
+      key: "phoneNumber",
+      title: "Утасны дугаар",
+      status: true,
+      ...getColumnSearchProps("phoneNumber"),
+    },
+    {
+      dataIndex: "email",
+      key: "email",
+      title: "Имэйл хаяг",
+      status: true,
+      ...getColumnSearchProps("email"),
+    },
+    {
       dataIndex: "partner",
       key: "partner",
       title: "Байгууллага",
