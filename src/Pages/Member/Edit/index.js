@@ -230,7 +230,7 @@ const Add = (props) => {
           );
       });
     }
-
+    data.status = false;
     const sendData = convertFromdata(data);
     props.updateMember(props.match.params.id, sendData);
   };

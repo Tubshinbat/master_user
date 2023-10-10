@@ -208,6 +208,8 @@ const Add = (props) => {
     const data = {
       ...values,
     };
+
+    data.status = false;
     const sendData = convertFromdata(data);
     props.createMember(sendData);
   };
